@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: #dcdce6;
+  font-family: 'Hind', sans-serif;
+}

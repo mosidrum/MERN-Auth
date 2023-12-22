@@ -1,3 +1,7 @@
+
 export const paths = {
-  home: '/'
+  dashboard: '/',
+  register: '/register',
+  recover: '/recover',
+  profile: '/profile',
 }
