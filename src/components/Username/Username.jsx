@@ -1,10 +1,12 @@
 import { paths } from '@routes/paths';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useSnackbar } from 'notistack';
+import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import NoImage from '@assets/human.png';
 import styles from './Username.module.css';
+import { usernameValidate } from '@utils/validate';
+
 
 export const Username = () => {
 	const navigate = useNavigate();
@@ -12,6 +14,7 @@ export const Username = () => {
 		initialValues: {
 			username: '',
 		},
+    validate: usernameValidate,
 		validateOnBlur: false,
 		validateOnChange: false,
 		onSubmit: async (values) => console.log(values),
@@ -19,6 +22,7 @@ export const Username = () => {
 
 	return (
 		<div className="container mx-auto">
+      <Toaster position='top-center' reverseOrder={false} />
 			<div className="flex justify-center h-screen">
 				<div className={styles.glass}>
 					<div className="title flex flex-col items-center">
